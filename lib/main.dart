@@ -1,9 +1,15 @@
 // Importing the necessary Flutter material package
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 void main() {
   // Entry point of the application, runApp function starts the app
-  runApp(const MyApp());
+  runApp(
+    ChangeNotifierProvider(
+    create: (context) => CartModel(),
+    child: const MyApp(),
+    )
+    );
 }
 
 // MyApp class which is the root of the application
@@ -213,7 +219,7 @@ class ElectronicScreen extends StatelessWidget {
     List<Map<String, String>> products = [
       {'name': 'Tablet', 'price': '\$100', 'stock': 'In Stock', 'image': 'https://tinyurl.com/4hvyf4wm', },
       {'name': 'Laptop', 'price': '\$150', 'stock': 'In Stock', 'image': 'https://tinyurl.com/3pbea7hr'},
-      {'name': 'Mouse', 'price': '\$200', 'stock': 'Out of Stock', 'image': 'https://tinyurl.com/mvv4yrfr'},
+      {'name': 'Mouse', 'price': '\$200', 'stock': 'In Stock', 'image': 'https://tinyurl.com/mvv4yrfr'},
       {'name': 'Keyboard', 'price': '\$300', 'stock': 'In Stock', 'image': 'https://tinyurl.com/2xdyh47h'},
     ];
 
@@ -295,7 +301,7 @@ class ClothScreen extends StatelessWidget {
     List<Map<String, String>> products = [
       {'name': 'Hoodies', 'price': '\$100', 'stock': 'In Stock', 'image': 'https://images.pexels.com/photos/702350/pexels-photo-702350.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2', },
       {'name': 'Official Coat', 'price': '\$150', 'stock': 'In Stock', 'image': 'https://images.pexels.com/photos/840916/pexels-photo-840916.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
-      {'name': 'Tshirts', 'price': '\$200', 'stock': 'Out of Stock', 'image': 'https://images.pexels.com/photos/2294342/pexels-photo-2294342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
+      {'name': 'Tshirts', 'price': '\$200', 'stock': 'In Stock', 'image': 'https://images.pexels.com/photos/2294342/pexels-photo-2294342.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
       {'name': 'Scarfs', 'price': '\$250', 'stock': 'In Stock', 'image': 'https://images.pexels.com/photos/375880/pexels-photo-375880.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
     ];
 
@@ -375,7 +381,7 @@ class BookScreen extends StatelessWidget {
     List<Map<String, String>> products = [
       {'name': 'Secret Sevens', 'price': '\$100', 'stock': 'In Stock', 'image': 'https://th.bing.com/th/id/OIP.MCJvDWSRLQWufllK6eaWmAHaHa?rs=1&pid=ImgDetMain', },
       {'name': 'Dork Diaries', 'price': '\$150', 'stock': 'In Stock', 'image': 'https://cdn.shopify.com/s/files/1/0252/3362/1082/products/dork-diaries-rachel-renee-russell-collection-12-books-set-puppy-love-drama-queepaperbacksimon-schusterlowplex-25587317_800x.jpg?v=1583015126'},
-      {'name': 'Diary of a Wimpy Kid', 'price': '\$200', 'stock': 'Out of Stock', 'image': 'https://n4.sdlcdn.com/imgs/j/f/3/Diary-Of-A-Wimpy-Kid-SDL477999179-1-c1944.jpg'},
+      {'name': 'Diary of a Wimpy Kid', 'price': '\$200', 'stock': 'In Stock', 'image': 'https://n4.sdlcdn.com/imgs/j/f/3/Diary-Of-A-Wimpy-Kid-SDL477999179-1-c1944.jpg'},
       {'name': 'Goosebumps', 'price': '\$250', 'stock': 'In Stock', 'image': 'https://cdn.shopify.com/s/files/1/0338/4872/1545/products/IMG_1046_1400x1400.jpg?v=1603948768'},
 
     ];
@@ -457,7 +463,7 @@ class ShoesScreen extends StatelessWidget {
     List<Map<String, String>> products = [
       {'name': 'High Heels', 'price': '\$1000', 'stock': 'In Stock', 'image': 'https://tinyurl.com/ymcn8wx7', },
       {'name': 'Sport Shoes', 'price': '\$1500', 'stock': 'In Stock', 'image': 'https://images.pexels.com/photos/2385477/pexels-photo-2385477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'},
-      {'name': 'Nike Low Dunks', 'price': '\$2000', 'stock': 'Out of Stock', 'image': 'https://tinyurl.com/nhabfw4f'},
+      {'name': 'Nike Low Dunks', 'price': '\$2000', 'stock': 'In Stock', 'image': 'https://tinyurl.com/nhabfw4f'},
       {'name': 'Boots', 'price': '\$250', 'stock': 'In Stock', 'image': 'https://tinyurl.com/4t298pms'},
     ];
 
@@ -537,7 +543,7 @@ class HomeKitScreen extends StatelessWidget {
     List<Map<String, String>> products = [
       {'name': 'Sofa', 'price': '\$1000', 'stock': 'In Stock', 'image': 'https://tinyurl.com/bd2e259x', },
       {'name': 'Dinning set', 'price': '\$15000', 'stock': 'In Stock', 'image': 'https://tinyurl.com/hw42dc74'},
-      {'name': 'refrigerator', 'price': '\$2000', 'stock': 'Out of Stock', 'image': 'https://tinyurl.com/h9d77rcv'},
+      {'name': 'refrigerator', 'price': '\$2000', 'stock': 'In Stock', 'image': 'https://tinyurl.com/h9d77rcv'},
       {'name': 'Chandelier', 'price': '\$3000', 'stock': 'In Stock', 'image': 'https://tinyurl.com/ycyt8t85'},
     ];
 
@@ -616,7 +622,7 @@ class ToysScreen extends StatelessWidget {
     // Dummy list of products with details
     List<Map<String, String>> products = [
       {'name': 'Baby Doll', 'price': '\$150', 'stock': 'In Stock', 'image': 'https://tinyurl.com/4s55jjdj'},
-      {'name': 'Teddy Bear', 'price': '\$200', 'stock': 'Out of Stock', 'image': 'https://tinyurl.com/vzdvbrdx'},
+      {'name': 'Teddy Bear', 'price': '\$200', 'stock': 'In Stock', 'image': 'https://tinyurl.com/vzdvbrdx'},
       {'name': 'Toy Car', 'price': '\$250', 'stock': 'In Stock', 'image': 'https://tinyurl.com/3e9ev89f'},
       {'name': 'Toy piano', 'price': '\$300', 'stock': 'In Stock', 'image': 'https://tinyurl.com/59rfd8r6'},
     ];
@@ -687,6 +693,8 @@ class ToysScreen extends StatelessWidget {
   // Function to add the product to the cart
   void addToCart(BuildContext context, Map<String, String> product) {
     // Implement logic to add the product to the cart
+     final cart = Provider.of<CartModel>(context, listen: false);
+
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -698,7 +706,17 @@ class ToysScreen extends StatelessWidget {
               onPressed: () {
                 Navigator.of(context).pop(); // Close the dialog
               },
-              child: const Text('OK'), // OK button
+              child: const Text('Cancel'), // OK button
+            ),
+            TextButton(
+              onPressed: () {
+              cart.addItem(CartItem(name: product['name']!, price: product['price']!));
+              Navigator.pop(context);
+              ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(content: Text('${product['name']} added to cart')),
+            );
+              },
+             child: const Text("Add"),
             ),
           ],
         );
@@ -736,9 +754,90 @@ class CartScreen extends StatelessWidget {
         title: const Text('Cart'), // Title of the app bar
         centerTitle: true, // Center the title
       ),
-      body: const Center(
-        child: Text('Shopping Cart Screen'), // Text content of the shopping cart screen
+            body: Consumer<CartModel>(
+        builder: (context, cart, child) {
+          return Column(
+            children: [
+              Expanded(
+                child: ListView.builder(
+                  itemCount: cart.items.length,
+                  itemBuilder: (context, index) {
+                    final item = cart.items[index];
+                    return Row(
+                      children: [
+                        
+                        ListTile(
+                          title: Text(item.name),
+                          subtitle: Text(item.price),
+                          trailing: IconButton(
+                            icon: const Icon(Icons.remove_circle),
+                            onPressed: () {
+                              cart.removeItem(item);
+                            },
+                          ),
+                        ),
+                      ],
+                    );
+                  },
+                ),
+              ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text('Total: \$${cart.totalPrice.toStringAsFixed(2)}'),
+                  ),
+                  ElevatedButton(onPressed: (){
+                    cart.clearCart();
+                  },
+                   child: const Text("Clear Cart"),
+                   ),
+
+                  //adding space between the buttons
+                   const SizedBox(height: 5,),
+
+                ElevatedButton(
+                  onPressed: () {
+                     // Add your checkout logic here
+                      ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Proceeding to checkout')),
+                      );
+                  }, 
+                  child: const Text('Checkout'))
+            ],
+          );
+        }
       ),
     );
   }
+}
+
+
+
+class CartItem{
+  final String name;
+  final String price;
+
+  CartItem({required this.name, required this.price});
+}
+
+class CartModel extends ChangeNotifier {
+  final List<CartItem> _items = [];
+
+  List<CartItem> get items => List.unmodifiable(_items);
+
+   void addItem(CartItem item) {
+    _items.add(item);
+    notifyListeners();
+  }
+
+   void removeItem(CartItem item) {
+    _items.remove(item);
+    notifyListeners();
+  }
+
+  void clearCart() {
+    _items.clear();
+    notifyListeners();
+  }
+
+  double get totalPrice => _items.fold(0.0, (total, current) => total + double.parse(current.price.substring(1)));
 }
